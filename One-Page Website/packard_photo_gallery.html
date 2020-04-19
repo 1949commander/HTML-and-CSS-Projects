@@ -1,77 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Packard Photo Gallery</title>
+    <META http-equiv="content-type" content="text/html" charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Packard Gallery">
+    <meta name="author" content="Brian Reeves"
+    <!-- JavaScript Link at bottom of page -->
+    <link rel="stylesheet" href="./css/photo_gal.css">
+    <style></style>
+</head>
+<body>
 <!-- GALLERY -->
-			<section>
+<h1 style="text-align:center">PACKARD Photo Gallery</h1>
 				<div id="packard_gallery">
-					<h1>PACKARD Photo Gallery</h1>
-					<div>
-					
-						<!-- PHOTO CONTAINER 1 -->
-						<div>
-							<div>
-							<img src="./images/packard_1.jpg" alt="1949 PACKARD Front" width="200">
-								<div>
-									<h3>Click to Enlarge</h3>
-									<p>1949 PACKARD Deluxe 8 4 Door</p>
-								</div>
-							</div>
+					<div class="row">
+						<div class="column">
+						  	<img src="thumbs/thumb_packard_1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
 						</div>
-						<!-- END PHOTO CONTAINER 1 -->
-						<!-- PHOTO CONTAINER 2 -->
-						<div>
-							<div>
-							<img src="./images/packard_2.jpg" alt="1949 PACKARD Front" width="200">
-								<div>
-									<h3>Click to Enlarge</h3>
-									<p>1949 PACKARD Deluxe 8 Coupe </p>
-								</div>
-							</div>
+						<div class="column">
+						  	<img src="thumbs/thumb_packard_2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
 						</div>
-						<!-- END PHOTO CONTAINER 2 -->
-						<!-- PHOTO CONTAINER 3 -->
-						<div>
-							<div>
-							<img src="./images/packard_3.jpg" alt="1949 PACKARD Side" width="200">
-								<div>
-									<h3>Click to Enlarge</h3>
-									<p>1949 PACKARD Deluxe 8 Coupe "Side"</p>
-								</div>
-							</div>
+						<div class="column">
+						  	<img src="thumbs/thumb_packard_3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
 						</div>
-						<!-- END PHOTO CONTAINER 3 -->
-						<!-- PHOTO CONTAINER 4 -->
-						<div>
-							<div>
-							<img src="./images/packard_4.jpg" alt="1949 PACKARD Deluxe 8 4 Door" width="200">
-								<div>
-									<h3>Click to Enlarge</h3>
-									<p>1949 PACKARD Deluxe 8 4 Door</p>
-								</div>
-							</div>
+						<div class="column">
+						  	<img src="thumbs/thumb_packard_4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
 						</div>
-						<!-- END PHOTO CONTAINER 4 -->
-						<!-- PHOTO CONTAINER 5 -->
-						<div>
-							<div>
-							<img src="./images/packard_5.jpg" alt="1949 PACKARD Interior" width="200">
-								<div>
-									<h3>Click to Enlarge</h3>
-									<p>1949 PACKARD Interior</p>
-								</div>
-							</div>
+						<div class="column">
+							<img src="thumbs/thumb_packard_5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
 						</div>
-						<!-- END PHOTO CONTAINER 5 -->
-						<!-- PHOTO CONTAINER 6 -->
-						<div>
-							<div>
-							<img src="./images/packard_6.jpg" alt="1949 PACKARD Interior" width="200">
-								<div>
-									<h3>Click to Enlarge</h3>
-									<p>1949 PACKARD Interior</p>
-								</div>
-							</div>
+						<div class="column">
+							<img src="thumbs/thumb_packard_6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
 						</div>
-						<!-- END PHOTO CONTAINER 6 -->
-						
-					</div>
+					  </div>
 				</div>
-			</section>
-			<!-- END GALLERY -->
+	<div id="myModal" class="modal">
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<div class="modal-content">
+		
+			<div class="mySlides">
+				<div class="numbertext">1 / 6</div>
+				<img src="./images/packard_1.jpg" style="width:100%">
+			</div>
+		
+			<div class="mySlides">
+				<div class="numbertext">2 / 6</div>
+				<img src="./images/packard_2.jpg" style="width:100%">
+			</div>
+		
+			<div class="mySlides">
+				<div class="numbertext">3 / 6</div>
+				<img src="./images/packard_3.jpg" style="width:100%">
+			</div>
+			
+			<div class="mySlides">
+				<div class="numbertext">4 / 6</div>
+				<img src="./images/packard_4.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">5 / 6</div>
+				<img src="./images/packard_5.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">6 / 6</div>
+				<img src="./images/packard_6.jpg" style="width:100%">
+			</div>
+		
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		
+			<div class="caption-container">
+			<p id="caption"></p>
+			</div>
+		
+		
+			<div class="column">
+				<img class="demo cursor" src="./images/packard_1.jpg" style="width:100%" onclick="currentSlide(1)" alt="1949 Packard Sedan">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="./images/packard_2.jpg" style="width:100%" onclick="currentSlide(2)" alt="1949 Packard Coupe">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="./images/packard_3.jpg" style="width:100%" onclick="currentSlide(3)" alt="1949 Packard Coupe Side view">
+			</div>
+				<div class="column">
+				<img class="demo cursor" src="./images/packard_4.jpg" style="width:100%" onclick="currentSlide(4)" alt="1949 Packard Sedan Side View">
+			</div>
+			<div class="column">
+				<img class="demo cursor" src="./images/packard_5.jpg" style="width:100%" onclick="currentSlide(5)" alt="1949 Packard Interior">
+				</div>
+			<div class="column">
+				<img class="demo cursor" src="./images/packard_6.jpg" style="width:100%" onclick="currentSlide(6)" alt="1949 Packard Interior">
+			</div>
+		</div>
+	</div>
+	<script src="./js/gallery.js"></script>								  
+</body>
+
+
+</html>
